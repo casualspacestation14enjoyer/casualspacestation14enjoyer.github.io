@@ -2,21 +2,21 @@
 <html lang="en">
 
 <head>
-    <title>SS13 WebMap | TGMC | MagmoorDigsite</title>
+    <title>SS13 WebMap | /tg/ | TramStation</title>
     <link rel="shortcut icon" href="../../Files/favicon.ico" type="image/x-icon">
     <!-- Metadata -->
     <meta name="description" content="SS13 Web based map viewer built by AffectedArc07" />
-    <meta name="keywords" content="SS13, webmap, Space Station 13, /tg/station, TGMC, MagmoorDigsite" />
+    <meta name="keywords" content="SS13, webmap, Space Station 13, /tg/station, TramStation" />
     <meta name="author" content="AffectedArc07" />
     <!-- OpenGraph Metadata -->
-    <meta property="og:title" content="SS13 WebMap | TGMC | MagmoorDigsite" />
+    <meta property="og:title" content="SS13 WebMap | /tg/ | TramStation" />
     <meta property="og:description" content="SS13 Web based map viewer built by AffectedArc07." />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://affectedarc07.github.io/SS13WebMap/TGMC/MagmoorDigsite" />
+    <meta property="og:url" content="https://affectedarc07.github.io/SS13WebMap/TG/TramStation" />
     <meta property="og:image" content="https://affectedarc07.github.io/SS13WebMap/Files/images/webmap-logo.jpg" />
     <!-- Twitter Card data, discord apparently uses this one -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="S13 WebMap | TGMC | MagmoorDigsite">
+    <meta name="twitter:title" content="SS13 WebMap | F19 | Site 53">
     <meta name="twitter:description" content="SS13 Web based map viewer built by AffectedArc07.">
     <meta name="twitter:image" content="https://affectedarc07.github.io/SS13WebMap/Files/images/webmap-logo.jpg">
     <!-- <meta name="twitter:site" content="@publisher_handle"> 
@@ -54,18 +54,18 @@
     <div class="loader"></div>
     <div id="layer1"></div>
     <div id="layer2"></div>
-    <div id="layer3"></div>
     <div id="webmap"></div>
     <script type="text/javascript">
-        const bounds = [[0, 0], [-231, 200]];
+        const bounds = [[0, 0], [-255, 255]];
         const map_config = {
-            "minZoom":3, "maxZoom":6,
             "center": [-128, 128], "zoom": 4,
             "crs": L.CRS.Simple
         };
         const image_config = {
-            "map":[{"z":1,"url":"https://mocha.affectedarc07.co.uk/webmap/tgmc/magmoordigsiteiv/Magmoor_Digsite_IV-1.png"}],
-            "pipenet":[{"z":1,"url":"https://mocha.affectedarc07.co.uk/webmap/tgmc/magmoordigsiteiv/Magmoor_Digsite_IV-1-pipe.png"}]
+            "map":[
+                {"z":1, "name": "Upper Level", "url":"https://scp13.miraheze.org/w/img_auth.php/d/d6/Site53_2.png"},
+                {"z":2, "name": "Lower Level", "url":"https://scp13.miraheze.org/w/img_auth.php/d/d6/Site53_1.png"}
+            ]
         };
         var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
