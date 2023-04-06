@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>SS13 WebMap | /tg/ | TramStation</title>
+    <title>SS13 WebMap | F19 | Site 53</title>
     <link rel="shortcut icon" href="../Files/favicon.ico" type="image/x-icon">
     <!-- Metadata -->
     <meta name="description" content="SS13 Web based map viewer built by AffectedArc07" />
     <meta name="keywords" content="SS13, webmap, Space Station 13, /tg/station, TramStation" />
-    <meta name="author" content="AffectedArc07" />
+    <meta name="author" content="Seven7" />
     <!-- OpenGraph Metadata -->
-    <meta property="og:title" content="SS13 WebMap | /tg/ | TramStation" />
+    <meta property="og:title" content="SS13 WebMap | F19 | Site 53" />
     <meta property="og:description" content="SS13 Web based map viewer built by AffectedArc07." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://affectedarc07.github.io/SS13WebMap/TG/TramStation" />
@@ -64,14 +64,14 @@
         };
         const image_config = {
             "map":[
-                {"z":1, "name": "Upper Level", "url":"https://scp13.miraheze.org/w/img_auth.php/d/d6/Site53_2.png"},
-                {"z":2, "name": "Lower Level", "url":"https://scp13.miraheze.org/w/img_auth.php/d/d6/Site53_1.png"}
+                {"z":2, "name": "Site-53 [2]", "url":"https://scp13.miraheze.org/w/img_auth.php/d/d6/Site53_2.png"},
+                {"z":1, "name": "Site-53 [1]", "url":"https://scp13.miraheze.org/w/img_auth.php/d/d6/Site53_1.png"}
             ]
         };
         var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
         webmap.setMaxBounds(bounds);
-        webmap.attributionControl.setPrefix('SS13 WebMap by AffectedArc07');
+        webmap.attributionControl.setPrefix('F19 WebMap by Seven7');
 
         var lazylayers = bakeLayers(image_config, webmap, bounds);
         console.info(lazylayers);
